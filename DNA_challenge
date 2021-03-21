@@ -1,0 +1,39 @@
+# In DNA strings, symbols "A" and "T" are complements of each other,
+# as "C" and "G". You have function with one side of the DNA (string,
+# except for Haskell); you need to get the other complementary side.
+# DNA strand is never empty or there is no DNA at all (again, except
+# for Haskell).
+
+
+# Solution One
+def DNA_strand(dna):
+    output = ""
+    for i in dna:
+        if i == 'A':
+            output += 'T'
+        if i == 'T':
+            output += 'A'
+        if i == 'C':
+            output += 'G'
+        if i == 'G':
+            output += 'C'
+    return output
+    
+
+# Solution Two
+
+
+exchangables = {'A': 'T',
+                'T': 'A',
+                'C': 'G',
+                'G': 'C'
+                }
+                
+                
+def DNA_strand1(dna):
+    return ''.join([exchangables[i] for i in dna])
+    
+    
+    
+    
+    
